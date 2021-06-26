@@ -27,13 +27,13 @@ V= S/sum(S)
 
 opts = detectImportOptions('Real Estate.xlsx');
 opts.SelectedVariableNames = (1);
-rekomendasi = readmatrix('Real Estate.xlsx', opts); %membaca file Real Estate.xlsx
+estate = readmatrix('Real Estate.xlsx', opts); %membaca file Real Estate.xlsx
 
 for i=1:5 
    %mengambil data peringkat 1 sampai 5
     for j=1:m
         if(B(i) == V(j))
-            alt(i) = "nomor " + rekomendasi(j);
+            alt(i) = "nomor " + estate(j);
             break;
         end
     end
